@@ -461,9 +461,24 @@ backReference 是分组下标(**这个分组不需要通过反斜杠，只需要
 
 [在线练习](https://regex101.com/r/cvxkMe/1)
 	
+### 5.2 断言嵌入条件
 
+语法：
+```
+(?(assert)true-regex[|false-regex])
+```
+false-regex非必选项
+assert:断言语法,例如(?(?=x)regex),(?(?<=x)regex),(?(?!x)regex),(?(?<!x)regex) 
 
-backReference 是分组下标，如果存在分组情况，则执行true-regex的正则表达式,反之执行false-regex表达内容
+练习题：
+美国邮政编码有两种格式， 种是12345 形式的ZIP格式，另 种是
+12345-6789形式的ZIP 只有ZIP 格式才必须使用连 符来分隔
+位和后 位数字。找出符合格式的数据
+11111 
+22222 
+33333-
+44444-4444
+[在线练习](https://regex101.com/r/VmqTZR/1)
 
 ## 6. 标志
 
